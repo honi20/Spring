@@ -12,7 +12,7 @@ public class HelloController {
     @GetMapping("hello")
     public String hello(Model model){
         model.addAttribute("data", "hello!!");
-        return "hello";     // templates/hello.html로 이동
+        return "hello";
     }
 
     @GetMapping("hello-mvc")
@@ -24,7 +24,7 @@ public class HelloController {
     @GetMapping("hello-string")
     @ResponseBody
     public String helloString(@RequestParam("name") String name){
-        return "hello "+name;
+        return "hello " + name;
     }
 
     @GetMapping("hello-api")
@@ -36,9 +36,8 @@ public class HelloController {
     }
 
     static class Hello{
-        private  String name;
+        private String name;
 
-//        command + N
         public String getName() {
             return name;
         }
@@ -48,3 +47,8 @@ public class HelloController {
         }
     }
 }
+
+
+
+
+

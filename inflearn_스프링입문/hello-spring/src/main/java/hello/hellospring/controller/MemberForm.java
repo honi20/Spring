@@ -1,7 +1,6 @@
 package hello.hellospring.controller;
 
 public class MemberForm {
-    // createMemberForm.html의 name의 value값이 들어옴
     private String name;
 
     public String getName() {
@@ -12,3 +11,6 @@ public class MemberForm {
         this.name = name;
     }
 }
+
+
+

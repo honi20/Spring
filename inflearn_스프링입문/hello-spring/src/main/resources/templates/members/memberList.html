@@ -2,24 +2,23 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <body>
 <div class="container">
-  <div>
-    <table>
-      <thead>
-      <tr>
-        <th>#</th>
-        <th>이름</th>
-      </tr>
-      </thead>
-      <tbody>
-<!--      ${} : 모델 안에 있는 값을 꺼내오기-->
-<!--루프를 돌면서 로직 실행-->
-      <tr th:each="member : ${members}">
-        <td th:text="${member.id}"></td>
-        <td th:text="${member.name}"></td>
-      </tr>
-      </tbody>
-    </table>
-  </div>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>이름</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="member : ${members}">
+                    <td th:text="${member.id}"></td>
+                    <td th:text="${member.name}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div> <!-- /container -->
 </body>
 </html>
+

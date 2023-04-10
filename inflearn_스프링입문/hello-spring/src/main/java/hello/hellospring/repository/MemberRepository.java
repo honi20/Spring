@@ -1,4 +1,5 @@
 package hello.hellospring.repository;
+
 import hello.hellospring.domain.Member;
 
 import java.util.List;
@@ -10,3 +11,4 @@ public interface MemberRepository {
     Optional<Member> findByName(String name);
     List<Member> findAll();
 }
+
