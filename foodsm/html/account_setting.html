@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang = "ko">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+        <title>Account Setting</title>
+        <link rel="stylesheet" href="css/account_setting_style.css">
+    </head>
+    <body>
+        <div class="section">
+            <div class="section-1"></div>
+            <div class="section-2">
+                <h4><span id="username"></span></h4>
+            </div>
+            <div class="section-3">
+                <div class = "form-container">
+                    <form>
+                        <label for="now-pw">현재 비밀번호</label><br>
+                        <input type = "password" class = "password-input" placeholder = "현재 비밀번호"><br>
+                        <label for="new-pw">새 비밀번호</label><br>
+                        <input type = "password" class = "password-input" placeholder = "새 비밀번호"><br>
+                        <label for="check-pw">비밀번호 확인</label><br>
+                        <input type = "password" class = "password-input" placeholder = "비밀번호 확인"><br>
+                    </form>
+                </div>
+            </div>
+            <div class="section-4">
+                <input type="submit" value="저장하기">
+            </div>
+        </div>
+
+        <script>
+            // 데이터베이스에서 유저 이름을 가져와서 표시하는 로직
+            var username = "사용자 이름"; // 데이터베이스에서 가져온 유저 이름
+            var usernameElement = document.getElementById("username");
+            usernameElement.innerText = username;
+        </script>    
+    </body>
+</html>

@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+}
+.section {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.section-1 {
+    height: 15%;
+    background-color: #ffc900;
+}
+.section-1 .empty {
+    float: left;
+    width: 25%;
+    height: 100%;
+    background-color: #ffc900;
+}
+.section-1 .logo {
+    float: left;
+    width: 50%;
+    height: 100%;
+    background-color: #ffc900;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.section-1 .logo h1 {
+    font-size: 30px;
+    color: #322828;
+}
+.section-1 .profile {
+    float: left;
+    position: relative;
+    width: 11%;
+    height: 100%;
+    background-color: #ffc900;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.section-1 .profile::before {
+    content: "";
+    position: absolute;
+    width: 80%;
+    padding-top: 80%;
+    border-radius: 50%;
+    background-color: #322828;
+}
+.section-1 .login {
+    float: left;
+    width: 14%;
+    height: 100%;
+    background-color: #ffc900;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.section-1 .login .button-class {
+    color: #fff;
+    font-size: 14px;
+    padding: 5px;
+    border: none;
+    background-color: #322828;
+    cursor: pointer;
+}
+.section-1 .login .join-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 10px;
+    margin-top: 5px;
+    display: block;
+}
+.section-2 {
+    height: 70%;
+    background-color: #e3e3e3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.file-input-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+.file-input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    opacity: 0;
+    font-size: 100px;
+    cursor: pointer;
+}
+.file-input-label {
+    padding: 8px 15px;
+    background-color: #fff;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.section-3 {
+    height: 15%;
+    background-color: #322828;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/default}">
+<head>
+    <title>포스트 목록 조회</title>
+</head>
+<body>
+<div layout:fragment="content">
+    <h1>포스트 목록</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>Post Name</th>
+            <th>Post Img</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="post : ${posts}">
+            <th:block th:if="${post.getEmail() == #authentication.principal.username}">
+                <td><a th:href="@{/post/{id}(id=${post.id})}" th:text="${post.name}"></a></td>
+                <td th:text="${post.imageUrl}">#</td>
+                <td th:text="${post.getUsername()}">#</td>
+            </th:block>
+
+<!--            <td th:href="post/${post.id}">show more!</td>-->
+<!--            </th:block>-->
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang = "ko" >
+<head>
+  <meta charset = "UTF-8">
+  <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+  <title>Join</title>
+  <link rel="stylesheet" href="css/join_style.css">
+</head>
+<body>
+<div class="section">
+  <div class="section-1">
+    <h1>사이트 이름</h1>
+  </div>
+  <div class="section-2">
+    <h4>회원가입</h4>
+  </div>
+  <div class="section-3">
+    <p class="welcome">WELCOME!</p>
+  </div>
+  <form method="post" th:if="${dto == null}">
+    <div class="section-4">
+      <div class = "form-container">
+        <label for="email">이메일</label><br>
+        <input type="email" id="email" name="email" placeholder="이메일을 입력하세요."><br>
+
+        <label for="username">이름</label><br>
+        <input type = "text" id="username" name="username" placeholder = "이름"><br>
+
+        <label for="password">비밀번호</label><br>
+        <input type = "password" id="password" name="password" placeholder = "비밀번호"><br>
+      </div>
+
+    </div>
+    <div class="section-5">
+      <input type="submit" value="시작하기">
+      <p class="login-link"><a href="/login" style="text-decoration: none; color: #322828;">로그인하기</a></p>
+    </div>
+  </form>
+  <form method="post" th:unless="${dto == null}">
+    <div class="section-4">
+      <div class="form-container">
+        <th:block th:if="${valid_email == null}">
+          <label for="email">이메일</label><br>
+          <input type="email" id="email" name="email"><br>
+        </th:block>
+        <th:block th:unless="${valid_email} == null">
+          <label for="floatingInput">이메일</label><br>
+          <input type="email" name="email" class="form-control is-invalid" id="floatingInput">
+          <div class="invalid-feedback" th:text="${valid_email}"></div>
+        </th:block>
+        <th:block th:if="${valid_username == null}">
+          <label for="floatingInput">이름</label><br>
+          <input type="text" name="username" class="form-control" id="floatingUsername">
+        </th:block>
+
+        <th:block th:unless="${valid_username == null}">
+          <label for="floatingInput">이름</label><br>
+          <input type="text" name="username" class="form-control is-invalid" id="floatingUsername">
+          <div class="invalid-feedback" th:text="${valid_username}"></div>
+        </th:block>
+        <br>
+
+        <label for="floatingPassword">비밀번호</label><br>
+        <input type="password" name="password" class="form-control" id="floatingPassword">
+      </div>
+    </div>
+    <div class="section-5">
+      <input type="submit" value="시작하기">
+      <p class="login-link"><a href="login.html" style="text-decoration: none; color: #322828;">로그인하기</a></p>
+    </div>
+  </form>
+</div>
+</body>
+</html>
